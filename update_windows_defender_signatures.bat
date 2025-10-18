@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
 
-goto check_Permissions
+goto check_permissions
 
-:check_Permissions
+:check_permissions
     echo Проверка прав администратора...
     
     net session >nul 2>&1
@@ -21,3 +21,4 @@ goto check_Permissions
     MpCmdRun.exe -removedefinitions -dynamicsignatures
     MpCmdRun.exe -SignatureUpdate
     pause
+    exit
